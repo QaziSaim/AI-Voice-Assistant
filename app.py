@@ -82,7 +82,7 @@ if user_input:
     # 🔊 Text-to-Speech with ElevenLabs
     try:
         audio_stream = eleven_client.text_to_speech.convert(
-            voice_id="N2al4jd45e882svx17SU",  # Replace with your valid voice ID
+            voice_id=os.getenv("ADAM_VOICE"),  # Replace with your valid voice ID
             model_id="eleven_turbo_v2",
             text=ai_message
         )
